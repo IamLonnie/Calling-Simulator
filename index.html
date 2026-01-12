@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calling Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+<div class="flowers"></div>
+<!-- MÚSICA DE FONDO -->
+<audio id="bgMusic" src="audio/musica_fondo.mp3" loop></audio>
+
+<!-- PANTALLA START -->
+<div id="startScreen" class="center">
+    <h1>Calling Simulator</h1>
+    <p>Kenia ❤ Roche</p>
+    <button id="startBtn">START</button>
+</div>
+
+<!-- SIMULADOR DE LLAMADAS -->
+<div id="callScreen" class="hidden">
+
+    <div class="call-header">
+        <span class="lock">🔒 Cifrado de extremo a extremo</span>
+    </div>
+
+    <div class="call-body">
+        <img id="callerImg" src="" class="avatar">
+        <h2 id="callerName"></h2>
+        <span class="call-status" id="callStatus">Llamando…</span>
+        <span id="callTimer" class="call-timer">00:00</span>
+
+    </div>
+
+    <!-- SLIDER -->
+    <div class="slider">
+        <div class="slider-track">
+            <span>Desliza para responder</span>
+            <input type="range" min="0" max="100" value="0" id="playSlider">
+        </div>
+    </div>
+
+    <!-- TEXTO -->
+    <div id="textBox"></div>
+
+    <!-- BOTONES -->
+    <div class="controls">
+        <button class="fake-btn">
+            <img src="img/icons/video.svg" alt="">
+        </button>
+        <button class="fake-btn">
+            <img src="img/icons/microphone.svg" alt="">
+        </button>
+
+        <button id="hangBtn" class="main-btn">
+            <img src="img/icons/phone-off.svg" alt="">
+        </button>
+
+        <button class="fake-btn">
+            <img src="img/icons/volume.svg" alt="">
+        </button>
+        <button class="fake-btn">
+            <img src="img/icons/plus.svg" alt="">
+        </button>
+    </div>
+</div>
+<div id="finalOverlay">
+    <div id="finalText"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
